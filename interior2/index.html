@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Interior - Transform Your Space</title>
+    <link rel="icon" href="/interior2/prime_logo.png">
+    <link rel="stylesheet" href="/interior2/prime_style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <!--<img src="C:\Users\AM\Downloads\clear_photo-removebg-preview.jpg" alt="Prime Interior" class="logo-img">-->
+                <span>PRIME INTERIOR</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="underline">Home</a></li>
+                <li><a href="#services" class="underline">Services</a></li>
+                <li><a href="#gallery" class="underline">Portfolio</a></li>
+                <li><a href="#contact" class="underline">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-logo-container">
+                <img src="/interior2/image/prime_logo.png" alt=".Prime Interior" class="hero-logo-img">
+            </div>
+            <h1>Transform Your Space</h1>
+            <p>Premium interior design solutions that bring your vision to life</p>
+            <!--<button class="cta-button" onclick="openInquiryForm()">
+                Get Started
+            </button>-->
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title" style="color: #333;">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💬</div>
+                    <h3>Free Consultation</h3>
+                    <p>Get expert advice and personalized design consultation at no cost</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>3D Design Visualization</h3>
+                    <p>See your dream space come to life with detailed 3D renderings before execution</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔨</div>
+                    <h3>On-site Installation</h3>
+                    <p>Professional installation by our skilled craftsmen ensuring perfect finish</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✏️</div>
+                    <h3>Custom Design Solutions</h3>
+                    <p>Tailored designs that perfectly match your style, space and budget</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>After-sales Support</h3>
+                    <p>Dedicated support team for any queries or assistance after project completion</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⭐</div>
+                    <h3>Warranty Services</h3>
+                    <p>Comprehensive warranty coverage on all our products and installations</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Material Selection Guidance</h3>
+                    <p>Expert help in choosing the right materials for durability and aesthetics</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💰</div>
+                    <h3>Budget Planning</h3>
+                    <p>Smart budget allocation and cost-effective solutions without compromising quality</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>Project Management</h3>
+                    <p>End-to-end project coordination ensuring timely delivery and quality control</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔑</div>
+                    <h3>Turnkey Solutions</h3>
+                    <p>Complete hassle-free interior solutions from design to final handover</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Portfolio</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">Modern Living Room</div>
+                <div class="gallery-item">Luxury Bedroom</div>
+                <div class="gallery-item">Contemporary Kitchen</div>
+                <div class="gallery-item">Office Design</div>
+                <div class="gallery-item">Boutique Store</div>
+                <div class="gallery-item">Restaurant Interior</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Inquiry Form Modal -->
+    <div class="inquiry-modal" id="inquiryModal">
+        <div class="inquiry-modal-content">
+            <button class="close-inquiry" onclick="closeInquiryForm()">×</button>
+            <div class="inquiry-header">
+                <h2>Get Started with Your Dream Space</h2>
+                <p>Fill in your details and we'll get back to you soon!</p>
+            </div>
+            <div class="inquiry-body">
+                <form id="customerInquiryForm">
+                    <div class="inquiry-form-group">
+                        <label>Full Name *</label>
+                        <input type="text" id="custName" placeholder="Enter your full name">
+                    </div>
+
+                    <div class="inquiry-form-group">
+                        <label>Email Address *</label>
+                        <input type="email" id="custEmail" placeholder="Enter your email">
+                    </div>
+
+                    <div class="inquiry-form-group">
+                        <label>Mobile Number *</label>
+                        <input type="tel" id="custMobile" placeholder="Enter your mobile number">
+                    </div>
+
+                    <div class="inquiry-form-group">
+                        <label>City</label>
+                        <input type="text" id="custCity" placeholder="Enter your city">
+                    </div>
+
+                    <div class="inquiry-form-group">
+                        <label>Property Type</label>
+                        <select id="custPropertyType">
+                            <option value="">Select property type</option>
+                            <option value="Apartment">Apartment</option>
+                            <option value="Villa">Villa</option>
+                            <option value="Office">Office</option>
+                            <option value="Shop">Shop/Showroom</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="inquiry-form-group">
+                        <label>Interested In (Select multiple)</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="int_complete" value="Complete Interior">
+                                <label for="int_complete">Complete Interior</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="int_sofa" value="Sofa Sets">
+                                <label for="int_sofa">Sofa Sets</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="int_bed" value="Beds">
+                                <label for="int_bed">Beds</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="int_kitchen" value="Modular Kitchen">
+                                <label for="int_kitchen">Modular Kitchen</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="int_wardrobe" value="Wardrobes">
+                                <label for="int_wardrobe">Wardrobes</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="int_tv" value="TV Units">
+                                <label for="int_tv">TV Units</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="int_dining" value="Dining Tables">
+                                <label for="int_dining">Dining Tables</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="int_curtain" value="Curtains">
+                                <label for="int_curtain">Curtains</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="int_pop" value="POP Designs">
+                                <label for="int_pop">POP Designs</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="int_wallpaper" value="Wallpaper">
+                                <label for="int_wallpaper">Wallpaper</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="int_lighting" value="Lighting">
+                                <label for="int_lighting">Lighting</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="int_decor" value="Decor Items">
+                                <label for="int_decor">Decor Items</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="int_door" value="Doors">
+                                <label for="int_door">Doors</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="int_carpet" value="Carpets">
+                                <label for="int_carpet">Carpets</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="inquiry-form-group">
+                        <label>Your Requirements</label>
+                        <textarea id="custRequirements" placeholder="Tell us about your requirements, budget, timeline, etc."></textarea>
+                    </div>
+
+                    <button type="submit" class="inquiry-submit-btn">Submit Inquiry</button>
+                </form>
+
+                <div class="success-message" id="successMessage">
+                    <h3>✓ Thank You!</h3>
+                    <p>Your inquiry has been submitted successfully.</p>
+                    <p>Our team will contact you within 24 hours.</p>
+                    <button class="inquiry-submit-btn" onclick="closeInquiryForm()" style="margin-top: 1rem; max-width: 200px; margin-left: auto; margin-right: auto;">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>📍Office Address</h3>
+                            <p>Lokhand Bazar, Top Nu Naku, Opp Navkar Steel <br> Bhavnagar, Gujarat 364001</p>
+                            <p><small>Easy to locate in the heart of Bhavnagar lati market</small></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>📞Contact Numbers</h3>
+                            <p> Abdul Bhai : +91 98246 21511 (Primary/WhatsApp)</p>
+                            <p> Hatim Bhai : +91 93275 35252</p>
+                            <p> Abbas Bhai : +91 98980 77252 </p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>📧 Email Address</h3>
+                            <p> primeinterior53@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>⌚ Business Hours</h3>
+                            <p> Monday - Saturday: 9:00 AM – 8:30 PM</p>
+                            <p> Sunday: 9:00 AM – 1:00 PM</p>
+                            <!--<p><small>28 years of consistent service</small></p>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h3>PRIME INTERIOR</h3>
+            <p>Transforming spaces, enhancing lives</p>
+            <div class="social-links">
+                <a href="https://wa.me/919898077252" target="_blank" title="WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    </svg>
+                </a>
+                <a href="https://instagram.com/prime_interior_pi" target="_blank" title="Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                    </svg>
+                </a>
+            </div>
+            <p style="margin-top: 2rem; opacity: 0.7;">© 2024 Prime Interior. All rights reserved.</p>
+        </div>
+    </footer>
+
+    
+    <script src="/interior2/prime_script.js"></script>
+</body>
+</html>
