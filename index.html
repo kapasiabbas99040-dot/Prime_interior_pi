@@ -3,22 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111111">
+    <meta name="description" content="Prime Interior - premium interior design, modular kitchen, wardrobe, lighting and turnkey interior solutions in Bhavnagar, Gujarat.">
+    <meta name="color-scheme" content="light dark">
     <title>Prime Interior - Transform Your Space</title>
-    <link rel="icon" href="image/prime_logo.png">
-    <link rel="stylesheet" href="prime_style.css">
+    <link rel="icon" href="./image/prime_logo.png">
+    <link rel="stylesheet" href="prime_interior_premium.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">
-                <span>PRIME INTERIOR</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home" class="underline">Home</a></li>
-                <li><a href="#services" class="underline">Services</a></li>
-                <li><a href="#gallery" class="underline">Portfolio</a></li>
-                <li><a href="#contact" class="underline">Contact</a></li>
+            <a class="logo brand-logo" href="#home" aria-label="Prime Interior home">
+                <span class="brand-mark">PI</span>
+                <span>PRIME <b>INTERIOR</b></span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="underline" onclick="closeMenu()">Home</a></li>
+                <li><a href="#services" class="underline" onclick="closeMenu()">Services</a></li>
+                <li><a href="#gallery" class="underline" onclick="closeMenu()">Portfolio</a></li>
+                <li><a href="#contact" class="underline" onclick="closeMenu()">Contact</a></li>
             </ul>
+            <div class="header-tools">
+                <!--<button class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Toggle theme" title="Toggle light/dark theme">☾</button>-->
+                <!--<button class="share-toggle" type="button" onclick="shareWebsite()" aria-label="Share Prime Interior" title="Share website">↗</button>-->
+            </div>
         </nav>
 
     </header>
@@ -26,13 +37,60 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="hero-logo-container">
-                <img src="image/prime_logo.png" alt=".Prime Interior" class="hero-logo-img">
+                <img src="./image/prime_logo.png" alt="Prime Interior logo" class="hero-logo-img" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback');">
             </div>
             <h1>Transform Your Space</h1>
             <p>Premium interior design solutions that bring your vision to life</p>
+            <div class="hero-actions">
+                <button class="cta-button primary-cta" onclick="openInquiryForm()">Get Free Consultation</button>
+                <a class="cta-button secondary-cta" href="whatsapp://send?phone=919898077252&text=Hello%20Prime%20Interior%2C%20I%20want%20to%20discuss%20an%20interior%20project." onclick="openWhatsApp(event, 'Hello Prime Interior, I want to discuss an interior project.')">WhatsApp Us</a>
+            </div>
+            <div class="hero-highlights">
+                <span>✦ Custom Designs</span>
+                <span>✦ Quality Finish</span>
+                <span>✦ End-to-End Service</span>
+            </div>
+            <div class="hero-mini-actions">
+                <a href="tel:+919824621511">☎ Call Now</a>
+                <button type="button" onclick="openDirections()">⌖ Get Directions</button>
+            </div>
             <!--<button class="cta-button" onclick="openInquiryForm()">
                 Get Started
             </button>-->
+        </div>
+    </section>
+
+    <!--<section class="trust-strip" aria-label="Prime Interior highlights">
+        <div class="trust-item"><strong>10+</strong><span>Design Services</span></div>
+        <div class="trust-item"><strong>100%</strong><span>Custom Solutions</span></div>
+        <div class="trust-item"><strong>24/7</strong><span>WhatsApp Enquiry</span></div>
+        <div class="trust-item"><strong>★</strong><span>Quality Focused</span></div>
+    </section>-->
+
+    <section class="why-us section-light" id="why-us">
+        <div class="container">
+            <div class="eyebrow">WHY PRIME INTERIOR</div>
+            <h2 class="section-title">Designed Around <span>Your Life</span></h2>
+            <p class="section-lead">From the first idea to the final finish, we focus on practical layouts, elegant details and a smooth experience.</p>
+            <div class="why-grid">
+                <article class="why-card"><span>01</span><div><h3>Personalized Design</h3><p>Every space is planned around your style, needs and budget.</p></div></article>
+                <article class="why-card"><span>02</span><div><h3>Material Guidance</h3><p>Get practical help choosing finishes, fittings, colours and materials.</p></div></article>
+                <article class="why-card"><span>03</span><div><h3>One-Stop Execution</h3><p>Design, coordination and installation are handled in one workflow.</p></div></article>
+                <article class="why-card"><span>04</span><div><h3>After-Sales Support</h3><p>We stay available for support after your project is completed.</p></div></article>
+            </div>
+        </div>
+    </section>
+
+    <section class="process-section">
+        <div class="container">
+            <div class="eyebrow">OUR PROCESS</div>
+            <h2 class="section-title"><span>From Idea to Beautiful Space</span></h2>
+            <div class="process-grid">
+                <article class="process-card"><div class="process-number">01</div><h3>Consult</h3><p>Tell us about your space, style, needs and budget.</p></article>
+                <article class="process-card"><div class="process-number">02</div><h3>Design</h3><p>We shape the concept, layout, materials and visual direction.</p></article>
+                <article class="process-card"><div class="process-number">03</div><h3>Execute</h3><p>Our team coordinates the work and installation with attention to detail.</p></article>
+                <article class="process-card"><div class="process-number">04</div><h3>Handover</h3><p>Final checks, finishing touches and support after completion.</p></article>
+            </div>
         </div>
     </section>
 
@@ -97,17 +155,92 @@
 
     <section class="gallery" id="gallery">
         <div class="container">
-            <h2 class="section-title">Our Portfolio</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">Modern Living Room</div>
-                <div class="gallery-item">Luxury Bedroom</div>
-                <div class="gallery-item">Contemporary Kitchen</div>
-                <div class="gallery-item">Office Design</div>
-                <div class="gallery-item">Boutique Store</div>
-                <div class="gallery-item">Restaurant Interior</div>
+            <div class="eyebrow" align="center">PORTFOLIO</div>
+            <h2 class="section-title">Spaces We <span>Love Creating</span></h2>
+            <p class="section-lead">Explore our design categories. Replace the visual cards with your own project photos anytime.</p>
+            <div class="gallery-filters" role="tablist" aria-label="Portfolio categories">
+                <button class="filter-btn active" data-filter="all" onclick="filterGallery('all', this)">All</button>
+                <button class="filter-btn" data-filter="living" onclick="filterGallery('living', this)">Living</button>
+                <button class="filter-btn" data-filter="bedroom" onclick="filterGallery('bedroom', this)">Bedroom</button>
+                <button class="filter-btn" data-filter="kitchen" onclick="filterGallery('kitchen', this)">Kitchen</button>
+                <button class="filter-btn" data-filter="office" onclick="filterGallery('office', this)">Office</button>
+            </div>
+            <div class="gallery-grid premium-gallery">
+                <article class="gallery-card gallery-item" data-category="living" tabindex="0" onclick="openDesignCard(this)">
+                    <div class="visual visual-living"><span>Living Room</span><small>Modern • Warm • Elegant</small></div>
+                    <div class="gallery-card-body"><h3>Modern Living Room</h3><p>Comfort-first layouts with a premium finish.</p></div>
+                </article>
+                <article class="gallery-card gallery-item" data-category="bedroom" tabindex="0" onclick="openDesignCard(this)">
+                    <div class="visual visual-bedroom"><span>Bedroom</span><small>Calm • Minimal • Luxe</small></div>
+                    <div class="gallery-card-body"><h3>Luxury Bedroom</h3><p>Soft palettes, smart storage and relaxing details.</p></div>
+                </article>
+                <article class="gallery-card gallery-item" data-category="kitchen" tabindex="0" onclick="openDesignCard(this)">
+                    <div class="visual visual-kitchen"><span>Kitchen</span><small>Smart • Clean • Functional</small></div>
+                    <div class="gallery-card-body"><h3>Contemporary Kitchen</h3><p>Practical work zones with a refined look.</p></div>
+                </article>
+                <article class="gallery-card gallery-item" data-category="office" tabindex="0" onclick="openDesignCard(this)">
+                    <div class="visual visual-office"><span>Office</span><small>Focused • Professional • Modern</small></div>
+                    <div class="gallery-card-body"><h3>Office Interior</h3><p>Productive spaces designed for your brand.</p></div>
+                </article>
+                <article class="gallery-card gallery-item" data-category="living" tabindex="0" onclick="openDesignCard(this)">
+                    <div class="visual visual-store"><span>Showroom</span><small>Bold • Branded • Inviting</small></div>
+                    <div class="gallery-card-body"><h3>Boutique / Showroom</h3><p>Customer-friendly spaces with strong visual identity.</p></div>
+                </article>
+                <article class="gallery-card gallery-item" data-category="office" tabindex="0" onclick="openDesignCard(this)">
+                    <div class="visual visual-restaurant"><span>Commercial</span><small>Premium • Practical • Memorable</small></div>
+                    <div class="gallery-card-body"><h3>Commercial Interior</h3><p>Interiors planned around customer experience.</p></div>
+                </article>
             </div>
         </div>
     </section>
+
+    <section class="numbers-section">
+        <div class="container">
+            <div class="numbers-grid">
+                <div class="number-card"><strong class="counter" data-target="10">0</strong><span>Design Services</span></div>
+                <div class="number-card"><strong class="counter" data-target="100">0</strong><span>% Custom Approach</span></div>
+                <div class="number-card"><strong class="counter" data-target="24">0</strong><span>Hour Enquiry Access</span></div>
+                <div class="number-card"><strong>★★★</strong><span>Quality Focus</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="eyebrow">CLIENT EXPERIENCE</div>
+            <h2 class="section-title">What Clients <span>Appreciate</span></h2>
+            <div class="testimonial-grid">
+                <article class="testimonial-card"><div class="stars">★★★★★</div><p>“The team understood the requirements clearly and helped us plan the space in a practical way.”</p><div class="client">Home Interior Client <span>• Residential</span></div></article>
+                <article class="testimonial-card"><div class="stars">★★★★★</div><p>“Good attention to finishing details and useful guidance while selecting materials.”</p><div class="client">Interior Client <span>• Bedroom & Living</span></div></article>
+                <article class="testimonial-card"><div class="stars">★★★★★</div><p>“The communication through WhatsApp made it easy to discuss ideas and requirements.”</p><div class="client">Commercial Client <span>• Office</span></div></article>
+            </div>
+            <p class="demo-note">Sample review layout — replace these with your real customer reviews.</p>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container faq-wrap">
+            <div>
+                <div class="eyebrow">FAQ</div>
+                <h2 class="section-title">Questions, <span>Answered</span></h2>
+                <p class="section-lead">Quick answers for customers before they contact Prime Interior.</p>
+            </div>
+            <div class="faq-list">
+                <details><summary>Do you provide a free consultation?</summary><p>Yes. Customers can use the enquiry form or WhatsApp button to start a discussion.</p></details>
+                <details><summary>Can you work according to a fixed budget?</summary><p>Yes. Share your approximate budget and requirements so the design and material choices can be planned accordingly.</p></details>
+                <details><summary>Do you handle installation?</summary><p>Yes. On-site installation and project coordination are part of the listed services.</p></details>
+                <details><summary>How can I request a quotation?</summary><p>Use “Get Free Consultation” and send the enquiry directly through WhatsApp.</p></details>
+            </div>
+        </div>
+    </section>
+
+    <div class="design-popup" id="designPopup" aria-hidden="true">
+        <div class="design-popup-card">
+            <button type="button" class="design-popup-close" onclick="closeDesignCard()" aria-label="Close">×</button>
+            <div id="designPopupVisual" class="design-popup-visual"></div>
+            <div class="design-popup-content"><div class="eyebrow">PRIME INTERIOR</div><h2 id="designPopupTitle">Design Inspiration</h2><p id="designPopupText">Explore the design direction and contact us for a customized solution.</p><button class="gold-action" onclick="closeDesignCard(); openInquiryForm();">Get Free Consultation</button></div>
+        </div>
+    </div>
 
     <!-- Customer Inquiry Form Modal -->
     <div class="inquiry-modal" id="inquiryModal">
@@ -275,27 +408,71 @@
         </div>
     </section>
 
+    <section class="contact-actions-section">
+        <div class="container">
+            <div class="contact-cta-card">
+                <div>
+                    <div class="eyebrow">LET'S TALK</div>
+                    <h2>Ready to transform your space?</h2>
+                    <p>Choose the easiest way to connect with Prime Interior.</p>
+                </div>
+                <div class="contact-cta-actions">
+                    <a href="tel:+919824621511" class="outline-action">☎ Call</a>
+                    <button type="button" class="gold-action" onclick="openWhatsApp(null, 'Hello Prime Interior, I would like to discuss my interior project.')">💬 WhatsApp</button>
+                    <button type="button" class="outline-action" onclick="saveContact()">＋ Save Contact</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating contact buttons: stay visible while scrolling -->
+    <div class="floating-contact" aria-label="Quick contact">
+        <a class="floating-btn whatsapp-float"
+           href="https://wa.me/919898077252"
+           onclick="openWhatsApp(event, 'Hello Prime Interior, I want to know more.')"
+           aria-label="Open WhatsApp">
+            <svg class="social-svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.52 3.48A11.78 11.78 0 0 0 12.13 0C5.62 0 .33 5.29.33 11.8c0 2.08.54 4.11 1.56 5.9L.25 24l6.45-1.69a11.77 11.77 0 0 0 5.43 1.38h.01c6.51 0 11.8-5.29 11.8-11.8 0-3.15-1.23-6.11-3.42-8.41ZM12.14 21.7h-.01a9.82 9.82 0 0 1-5.01-1.37l-.36-.21-3.83 1 1.02-3.73-.24-.38a9.8 9.8 0 0 1-1.5-5.21c0-5.42 4.41-9.83 9.84-9.83 2.63 0 5.1 1.03 6.96 2.89a9.78 9.78 0 0 1 2.88 6.97c0 5.42-4.41 9.83-9.83 9.83Zm5.4-7.37c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.49-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.09 4.49.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+            </svg>
+            <span class="float-label">WhatsApp</span>
+        </a>
+
+        <a class="floating-btn instagram-float"
+           href="https://www.instagram.com/prime_interior_pi/"
+           onclick="openInstagram(event)"
+           aria-label="Open Instagram">
+            <svg class="social-svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 1.9a3.9 3.9 0 0 0-3.9 3.9v8.4a3.9 3.9 0 0 0 3.9 3.9h8.4a3.9 3.9 0 0 0 3.9-3.9V7.8a3.9 3.9 0 0 0-3.9-3.9H7.8Zm8.85 1.45a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.9A3.1 3.1 0 1 0 12 15.1 3.1 3.1 0 0 0 12 8.9Z"/>
+            </svg>
+            <span class="float-label">Instagram</span>
+        </a>
+
+        <button class="floating-top" type="button" onclick="scrollToTop()" aria-label="Back to top">↑</button>
+    </div>
+
     <footer>
         <div class="footer-content">
             <h3>PRIME INTERIOR</h3>
             <p>Transforming spaces, enhancing lives</p>
             <div class="social-links">
-                <a href="https://wa.me/919898077252" target="_blank" title="WhatsApp">
+                <a href="whatsapp://send?phone=919898077252" onclick="openWhatsApp(event, 'Hello Prime Interior, I want to discuss an interior project.')" title="WhatsApp" aria-label="WhatsApp">
+
                     <svg viewBox="0 0 24 24" fill="currentColor">
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                     </svg>
                 </a>
-                <a href="https://instagram.com/prime_interior_pi" target="_blank" title="Instagram">
+                <a href="instagram://user?username=prime_interior_pi" onclick="openInstagram(event)" title="Instagram" aria-label="Instagram">
                     <svg viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
                     </svg>
                 </a>
             </div>
-            <p style="margin-top: 2rem; opacity: 0.7;">© 2024 Prime Interior. All rights reserved.</p>
+            <p style="margin-top: 2rem; opacity: 0.7;">© 2024 Prime Interior. All rights reserved.<br><br><br>
+                <hr><br><br>Website Design & Development : Credit by Mr.Abbas Kapasi</p>
         </div>
     </footer>
 
     
-    <script src="/interior2/prime_script.js"></script>
+    <script src="prime_interior_premium.js"></script>
 </body>
 </html>
